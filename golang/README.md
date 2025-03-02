@@ -38,9 +38,11 @@ make check
 ```
 ![Image Check](assets/images/image-check.png)
 
-### Minify the Docker image using [minToolkit](https://github.com/mintoolkit/mint) and compare sizes with the original image
+### Minify the Docker image using [MinToolkit](https://github.com/mintoolkit/mint) and compare sizes with the original image
 ```bash
 make minify
 ```
 ![Minified Image](assets/images/minified-image.png)
+
+> SlimToolkit's optimization process did not result in a size reduction. The image's minimal footprint (2MB) is achieved by using scratch (distroless) as the base and directly copying the statically linked Go binary from the builder stage, which already results in a highly optimized image.
 
