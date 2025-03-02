@@ -1,19 +1,33 @@
+IMAGE_NAME = "tiny-go-docker-image"
+MINIFIED_IMAGE_NAME = "tiny-go-docker-image.slim"
+
 build:
-	docker build -t tiny-go-docker-image .
+	docker build -t $(IMAGE_NAME) .
 
 remove:
 	docker rm -f my-tiny-go-container 2>/dev/null
 
 run:
-	docker run -d -p 3000:3000 --name my-tiny-go-container tiny-go-docker-image
+	docker run -d -p 3000:3000 --name my-tiny-go-container $(IMAGE_NAME)
 
 size:
-	docker images tiny-go-docker-image
+	docker images $(IMAGE_NAME)
 
 up: build remove run size
 
 check:
-	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest --ci tiny-go-docker-image
+	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest --ci $(IMAGE_NAME)
 
 inspect:
-	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest tiny-go-docker-image
+	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest $(IMAGE_NAME)
+
+xray:
+	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mintoolkit/mint xray $(IMAGE_NAME)
+
+compare-sizes:
+	docker images | grep -E "$(IMAGE_NAME)|$(MINIFIED_IMAGE_NAME)"
+
+slim:
+	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mintoolkit/mint slim $(IMAGE_NAME)
+
+minify: slim compare-sizes
