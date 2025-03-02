@@ -37,3 +37,10 @@ make inspect
 make check
 ```
 ![Image Check](assets/images/image-check.png)
+
+### Minify the Docker image using [minToolkit](https://github.com/mintoolkit/mint) and compare sizes with the original image
+```bash
+make minify
+```
+![Minified Image](assets/images/minified-image.png)
+
