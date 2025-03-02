@@ -34,3 +34,6 @@ slim:
 	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mintoolkit/mint slim $(IMAGE_NAME)
 
 minify: slim compare-sizes
+
+security:
+	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --severity HIGH,CRITICAL --exit-code 1 --image-src docker $(IMAGE_NAME)
