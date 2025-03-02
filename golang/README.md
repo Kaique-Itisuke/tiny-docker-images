@@ -1,9 +1,11 @@
 ## About the application
 This Golang application implements a simple health check endpoint (`/health`) using the [GoFiber web framework](https://github.com/gofiber/fiber). Upon receiving a GET request, it returns an HTTP 200 status code with a JSON response: `{"message": "healthy"}`.
+
 ![Health Endpoint](assets/images/health-endpoint.png)
 
 ## About the Docker image
 A tiny **2MB**, statically linked Go image. Secure, [UPX-compressed](https://github.com/upx/upx), and running in a [scratch](https://hub.docker.com/_/scratch) (distroless) environment.
+
 ![Tiny Golang Docker Image](assets/images/final-image-size.png)
 
 ## Usage
@@ -15,6 +17,7 @@ make up
 
 ### Acess the health endpoint
 [http://localhost:3000/health](http://localhost:3000/health)
+
 ![Health Endpoint](assets/images/health-endpoint.png)
 
 ### Show the Docker image size
