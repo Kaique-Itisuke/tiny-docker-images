@@ -16,6 +16,7 @@ make size
 ```bash
 make inspect
 ```
+![Golang Final Image Size](assets/images/golang-final-image-size.png)
 
 ### Check if the Docker image has an acceptable size and wasted space ratio using [Dive](https://github.com/wagoodman/dive) CI mode
 ```bash
