@@ -11,3 +11,9 @@ size:
 	docker images tiny-go-docker-image
 
 up: build remove run size
+
+check:
+	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest tiny-go-docker-image
+
+inspect:
+	docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest --ci tiny-go-docker-image
