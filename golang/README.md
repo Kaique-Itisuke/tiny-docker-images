@@ -11,3 +11,13 @@ make up
 ```bash
 make size
 ```
+
+### Inspect each layer and files inside the Docker image using [Dive](https://github.com/wagoodman/dive) interactive UI
+```bash
+make inspect
+```
+
+### Check if the Docker image has an acceptable size and wasted space ratio using [Dive](https://github.com/wagoodman/dive) CI mode
+```bash
+make check
+```
