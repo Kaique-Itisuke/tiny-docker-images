@@ -1,0 +1,13 @@
+build:
+	docker build -t tiny-go-docker-image .
+
+remove:
+	docker rm -f my-tiny-go-container 2>/dev/null
+
+run:
+	docker run -d -p 3000:3000 --name my-tiny-go-container tiny-go-docker-image
+
+size:
+	docker images tiny-go-docker-image
+
+up: build remove run size
