@@ -52,6 +52,6 @@ make security
 ```
 ![Security Scan Example](assets/images/security-scan-example.png)
 
-> A Trivy scan of the node:lts-bookworm (Debian 12.9) image revealed multiple vulnerabilities. In contrast, this project's Golang image, built using a distroless base with only the compiled Go binary, showed zero vulnerabilities as you can see in the print bellow.
+> A Trivy scan of the node:lts-bookworm (Debian 12.9) image revealed multiple vulnerabilities. In contrast, this project's Golang image, built using a distroless image with only the compiled Go binary, showed zero vulnerabilities as you can see in the print bellow.
 ![Golang image Security Scan](assets/images/golang-image-security-scan.png)
 
