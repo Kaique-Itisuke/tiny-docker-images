@@ -1,3 +1,6 @@
+.SILENT:
+.PHONY: build remove run size up check inspect xray compare-sizes slim minify
+
 IMAGE_NAME = "tiny-go-docker-image"
 MINIFIED_IMAGE_NAME = "tiny-go-docker-image.slim"
 
