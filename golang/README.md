@@ -46,3 +46,12 @@ make minify
 
 > SlimToolkit's optimization process did not result in a size reduction. The image's minimal footprint (2MB) is achieved by using scratch (distroless) as the base and directly copying the statically linked Go binary from the builder stage, which already results in a highly optimized image.
 
+### Security scan to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
+```bash
+make security
+```
+![Security Scan Example](assets/images/security-scan-example.png)
+
+> A Trivy scan of the node:lts-bookworm (Debian 12.9) image revealed multiple vulnerabilities. In contrast, this project's Golang image, built using a distroless base with only the compiled Go binary, showed zero vulnerabilities as you can see in the print bellow.
+![Golang image Security Scan](assets/images/golang-image-security-scan.png)
+
