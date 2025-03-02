@@ -1,0 +1,29 @@
+ARG GO_VERSION=1.24.0
+ARG DISTRO_VERSION=alpine3.21
+
+FROM golang:${GO_VERSION}-${DISTRO_VERSION} AS builder
+
+RUN apk update && \
+    apk add upx --no-cache
+
+WORKDIR /build
+
+COPY go.mod go.sum ./
+
+RUN go mod download && go mod verify
+
+COPY ./main.go .
+
+RUN GOOS=linux CGO_ENABLED=0 go build -buildvcs=false -trimpath -ldflags="-s -w" main.go
+
+RUN upx --best --lzma main
+
+FROM scratch AS runner
+
+WORKDIR /app
+
+COPY --from=builder ./build/main .
+
+EXPOSE 3000
+
+ENTRYPOINT ["./main"]
