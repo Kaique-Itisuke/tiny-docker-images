@@ -4,7 +4,7 @@ This Golang application implements a simple health check endpoint (`/health`) us
 ![Health Endpoint](assets/images/health-endpoint.png)
 
 ## About the base Docker image
-A tiny **2MB**, statically linked Go image. Secure, [UPX-compressed](https://github.com/upx/upx), and running in a [scratch](https://hub.docker.com/_/scratch) (distroless) environment.
+A tiny **2MB**, statically linked Go image. Secure, Go binary [UPX-compressed](https://github.com/upx/upx) and multi-stage build in combination with a [scratch](https://hub.docker.com/_/scratch) (distroless) image to decrease the final image size.
 
 ![Tiny Golang Docker Image](assets/images/final-image-size.png)
 
