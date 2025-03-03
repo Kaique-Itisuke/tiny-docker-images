@@ -7,7 +7,7 @@ CONTAINER_NAME = "tiny-$(LANG)-docker-container"
 MINIFIED_CONTAINER_NAME = "tiny-$(LANG)-docker-container.slim"
 
 DOCKER_HIT_N_RUN_CMD = docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock
-DOCKER_RUN_CMD = docker run -d -p 8000:8000
+DOCKER_RUN_CMD = docker run -d -p $(PORT):$(PORT)
 DOCKER_SIZE_CMD = docker images
 DOCKER_PS_CMD = docker ps --filter "name= $(CONTAINER_NAME)" --filter "name= $(MINIFIED_CONTAINER_NAME)"
 MINIFY_CMD = $(DOCKER_HIT_N_RUN_CMD) mintoolkit/mint slim --include-workdir --http-probe-fail-on-status-5xx --http-probe-off --http-probe-cmd http:get:/health
