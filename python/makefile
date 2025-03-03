@@ -1,0 +1,2 @@
+LANG = python
+include ../makefile
