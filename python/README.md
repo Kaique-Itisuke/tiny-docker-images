@@ -78,3 +78,24 @@ make sec-min
 
 > A Trivy scan of the tiny-python-docker-image.slim (debian 12.9) minified image showed zero vulnerabilities as you can see in the print above.
 
+### Perform a software catalog scan to generate a Software Bill of Materials (SBOM) of the docker image, utilizing the [Syft](https://github.com/anchore/syft) tool
+
+### SBOM of the base image
+```bash
+make sbom
+```
+![SBOM of the base image](assets/images/sbom-base-image.png)
+
+### SBOM of the minified image
+```bash
+make sbom-min
+```
+![SBOM of the minified image](assets/images/sbom-minified-image.png)
+
+| Category      | Base Image        | Minified Image | Difference | Percentage Reduction |
+|---------------|-------------------|----------------|------------|----------------------|
+| Packages      | 141 packages      | 35 packages    | 106        | 75%                  |
+| File Digests  | 3,273 files       | 82 files       | 3191       | 97%                  |
+| File Metadata | 3,273 locations   | 82 locations   | 3191       | 97%                  |
+| Executables   | 804 executables   | 56 executables | 748        | 93%                  |
+| **Total**     | 7491              | 255            | **7236**   | **97%**              |
