@@ -46,6 +46,22 @@ make minify
 
 > SlimToolkit's optimization process did not result in a size reduction. The image's minimal footprint (2MB) is achieved by using scratch (distroless) as the base and directly copying the statically linked Go binary from the builder stage, which already results in a highly optimized image.
 
+### Show the Docker image differences between the original vs minified version using [diffoci](https://github.com/reproducible-containers/diffoci)
+#### Requirements
+- [Golang 1.21 version or later](https://go.dev/doc/install)
+
+#### Install the [diffoci](https://github.com/reproducible-containers/diffoci) as a global package using Go
+```bash
+make diff-install
+```
+
+#### Generate a text file, `diff-original-vs-minified-image.txt`, containing the differences between the original and minified Docker images [diffoci](https://github.com/reproducible-containers/diffoci)
+```bash
+make diff
+```
+
+![Original vs Minified Image](../assets/images/diff-images-file.png)
+
 ### Security scan to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
 ```bash
 make security
