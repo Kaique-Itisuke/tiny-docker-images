@@ -91,11 +91,11 @@ make sbom
 make sbom-min
 ```
 ![SBOM of the minified image](assets/images/sbom-minified-image.png)
+> The minified image achieves a 96% reduction in resources compared to the base image, effectively eliminating unnecessary OS packages and binaries.
 
 | Category      | Base Image        | Minified Image | Difference | Percentage Reduction |
 |---------------|-------------------|----------------|------------|----------------------|
 | Packages      | 141 packages      | 35 packages    | 106        | 75%                  |
 | File Digests  | 3,273 files       | 82 files       | 3191       | 97%                  |
-| File Metadata | 3,273 locations   | 82 locations   | 3191       | 97%                  |
 | Executables   | 804 executables   | 56 executables | 748        | 93%                  |
-| **Total**     | 7491              | 255            | **7236**   | **97%**              |
+| **Total**     | 4,218             | 173            | **4,045**  | **96%**              |
