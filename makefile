@@ -1,5 +1,5 @@
 .SILENT:
-.PHONY: build down run run-min ps size size-min sizes up up-min check check-min inspect inspect-min xray xray-min minify min sec sec-min diff-install diff
+.PHONY: build down run run-min ps size size-min sizes up up-min check check-min inspect inspect-min xray xray-min minify min sec sec-min diff-install diff sbom sbom-min
 
 IMAGE_NAME = "tiny-$(LANG)-docker-image"
 MINIFIED_IMAGE_NAME = "tiny-$(LANG)-docker-image.slim"
@@ -18,6 +18,7 @@ XRAY_CMD = $(DOCKER_HIT_N_RUN_CMD) mintoolkit/mint xray
 SECURITY_CMD = $(DOCKER_HIT_N_RUN_CMD) aquasec/trivy image --severity HIGH,CRITICAL --exit-code 1 --image-src docker
 DIFF_INSTALL_CMD = go install github.com/reproducible-containers/diffoci/cmd/diffoci@latest
 DIFF_CMD = diffoci diff --semantic --backend=local
+SBOM_CMD = $(DOCKER_HIT_N_RUN_CMD) anchore/syft
 
 build:
 	docker build -t $(IMAGE_NAME) .
@@ -81,3 +82,9 @@ diff-install:
 
 diff: sizes
 	$(DIFF_CMD) docker://$(IMAGE_NAME) docker://$(MINIFIED_IMAGE_NAME) > diff-original-vs-minified-image.txt
+
+sbom:
+	$(SBOM_CMD) $(IMAGE_NAME)
+
+sbom-min:
+	$(SBOM_CMD) $(MINIFIED_IMAGE_NAME)
