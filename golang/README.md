@@ -40,7 +40,7 @@ make check
 
 ### Minify the Docker image using [MinToolkit](https://github.com/mintoolkit/mint) and compare sizes with the original image
 ```bash
-make minify
+make min
 ```
 ![Minified Image](assets/images/minified-image.png)
 
