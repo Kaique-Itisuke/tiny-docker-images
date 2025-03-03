@@ -1,0 +1,7 @@
+[project]
+name = "tiny-python-docker-image"
+version = "0.0.1"
+description = "This Python application implements a simple health check endpoint /health using the FastAPI framework"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = []
