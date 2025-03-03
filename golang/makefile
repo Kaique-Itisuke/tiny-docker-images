@@ -32,7 +32,7 @@ compare-sizes:
 	docker images | grep -E "$(IMAGE_NAME)|$(MINIFIED_IMAGE_NAME)"
 
 slim:
-	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mintoolkit/mint slim $(IMAGE_NAME)
+	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mintoolkit/mint slim --http-probe-off --http-probe-cmd http:get:/health $(IMAGE_NAME)
 
 minify: slim compare-sizes
 
