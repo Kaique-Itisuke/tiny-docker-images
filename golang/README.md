@@ -64,7 +64,7 @@ make diff
 
 ### Security scan to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
 ```bash
-make security
+make sec
 ```
 ![Security Scan Example](assets/images/security-scan-example.png)
 
