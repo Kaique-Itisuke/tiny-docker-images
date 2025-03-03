@@ -28,6 +28,7 @@ These tools enable us to create lean, secure, and efficient container images, re
 ## Dockerfile best practices
 [Guide for writing production-worthy Docker images.](https://github.com/hexops-graveyard/dockerfile)
 [Official Docker Guide for best practices to build images.](https://docs.docker.com/build/building/best-practices)
+[Official Docker Multi-stage guide.](https://docs.docker.com/build/building/multi-stage)
 
 ## Docker Bench for Security
 [A script that checks for dozens of common best-practices around deploying Docker containers in production.](https://github.com/docker/docker-bench-security)
