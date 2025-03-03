@@ -4,5 +4,5 @@ app = FastAPI()
 
 
 @app.get("/health")
-def read_root() -> dict[str, str]:
+def health() -> dict[str, str]:
     return {"message": "healthy"}
