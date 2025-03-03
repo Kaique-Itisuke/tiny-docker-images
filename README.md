@@ -1,6 +1,8 @@
 # About
 A collection of highly optimized, minimal Docker container images for popular languages (Python, Go, Node.js), prioritizing size, security, and runtime efficiency.
 
+![Tiny Golang Docker Image](assets/images/tiny-docker-images-background.jpg)
+
 # Requirements
 - [Docker](https://www.docker.com/products/docker-desktop/) (Latest version)
 
