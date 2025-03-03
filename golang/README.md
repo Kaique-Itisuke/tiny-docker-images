@@ -1,5 +1,5 @@
 ## About the application
-This Golang application implements a simple health check endpoint (`/health`) using the [GoFiber web framework](https://github.com/gofiber/fiber). Upon receiving a GET request, it returns an HTTP 200 status code with a JSON response: `{"Message": "healthy"}`.
+This Golang application implements a simple health check endpoint (`/health`) using the [GoFiber web framework](https://github.com/gofiber/fiber). Upon receiving a GET request, it returns an HTTP 200 status code with a JSON response: `{"message": "healthy"}`.
 
 ![Health Endpoint](assets/images/health-endpoint.png)
 
