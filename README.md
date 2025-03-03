@@ -23,13 +23,15 @@ These tools enable us to create lean, secure, and efficient container images, re
 # Requirements
 - [Docker](https://www.docker.com/products/docker-desktop/) (Latest version)
 
-# Dockerfile best practices
+# References
+
+## Dockerfile best practices
 [Guide for writing production-worthy Docker images.](https://github.com/hexops-graveyard/dockerfile)
 
-# Docker Bench for Security
+## Docker Bench for Security
 [A script that checks for dozens of common best-practices around deploying Docker containers in production.](https://github.com/docker/docker-bench-security)
 
-# A Deeper Look into Node.js Docker Images
+## A Deeper Look into Node.js Docker Images
 [Research to help you choose the right base image for your Node.js application.](https://labs.iximiuz.com/tutorials/how-to-choose-nodejs-container-image)
 
 ![Node Images Comparison](assets/images/node-images-comparison.png)
