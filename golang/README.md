@@ -72,3 +72,11 @@ make sec
 
 ![Golang image Security Scan](assets/images/golang-image-security-scan.png)
 
+### Perform a software catalog scan to generate a Software Bill of Materials (SBOM) of the docker image, utilizing the [Syft](https://github.com/anchore/syft) tool
+
+### SBOM of the base image
+```bash
+make sbom
+```
+![SBOM of the base image](assets/images/sbom-base-image.png)
+> Using the scratch image, both the base and minified images include solely the Go runtime executable, with no additional OS resources or binaries.
