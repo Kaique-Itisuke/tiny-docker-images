@@ -3,15 +3,16 @@
 
 IMAGE_NAME = "tiny-go-docker-image"
 MINIFIED_IMAGE_NAME = "tiny-go-docker-image.slim"
+CONTAINER_NAME = "tiny-go-docker-container"
 
 build:
 	docker build -t $(IMAGE_NAME) .
 
 remove:
-	docker rm -f my-tiny-go-container 2>/dev/null
+	docker rm -f $(CONTAINER_NAME) 2>/dev/null
 
 run:
-	docker run -d -p 3000:3000 --name my-tiny-go-container $(IMAGE_NAME)
+	docker run -d -p 3000:3000 --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 size:
 	docker images $(IMAGE_NAME)
