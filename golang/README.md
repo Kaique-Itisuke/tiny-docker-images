@@ -62,13 +62,13 @@ make diff
 
 ![Original vs Minified Image](../assets/images/diff-images-file.png)
 
-### Security scan to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
+### Security scan to the original image to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
 ```bash
 make sec
 ```
 ![Security Scan Example](assets/images/security-scan-example.png)
 
-> A Trivy scan of the node:lts-bookworm (Debian 12.9) image revealed multiple vulnerabilities. In contrast, this project's Golang image, built using a distroless image with only the compiled Go binary, showed zero vulnerabilities as you can see in the print bellow.
+> A Trivy scan of the node:lts-bookworm (Debian 12.9) base image revealed multiple vulnerabilities. In contrast, this project's Golang image, built using a distroless image with only the compiled Go binary, showed zero vulnerabilities as you can see in the print bellow.
 
 ![Golang image Security Scan](assets/images/golang-image-security-scan.png)
 
