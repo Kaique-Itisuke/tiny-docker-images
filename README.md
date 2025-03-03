@@ -23,6 +23,12 @@ These tools enable us to create lean, secure, and efficient container images, re
 # Requirements
 - [Docker](https://www.docker.com/products/docker-desktop/) (Latest version)
 
+# Optimized Images
+Explore the monorepo to find optimized Docker images tailored for your specific language needs:
+- [![Language: Go][Golang-logo]](./golang/)
+- [![Language: Python][Python-logo]](./python/)
+- [![Language: Node][Node-logo]](][./node/])
+
 # References
 
 ## Dockerfile best practices
@@ -37,3 +43,9 @@ These tools enable us to create lean, secure, and efficient container images, re
 [Research to help you choose the right base image for your Node.js application.](https://labs.iximiuz.com/tutorials/how-to-choose-nodejs-container-image)
 
 ![Node Images Comparison](assets/images/node-images-comparison.png)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://github.com/alexandresanlim/Badges4-README.md-Profile -->
+[Golang-logo]: https://img.shields.io/badge/language-Go-00ADD8?style=for-the-badge&logo=go&logoColor=blue
+[Python-logo]: https://img.shields.io/badge/language-Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
+[Node-logo]: https://img.shields.io/badge/language-Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=blue
