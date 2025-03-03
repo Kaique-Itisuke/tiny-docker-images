@@ -1,7 +1,8 @@
 ARG GO_VERSION=1.24.0
 ARG DISTRO_VERSION=alpine3.21
+ARG IMAGE_TAG=${GO_VERSION}-${DISTRO_VERSION}
 
-FROM golang:${GO_VERSION}-${DISTRO_VERSION} AS builder
+FROM golang:${IMAGE_TAG} AS builder
 
 RUN apk update && \
     apk add upx --no-cache
