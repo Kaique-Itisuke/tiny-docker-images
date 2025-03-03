@@ -28,3 +28,8 @@ These tools enable us to create lean, secure, and efficient container images, re
 
 # Docker Bench for Security
 [A script that checks for dozens of common best-practices around deploying Docker containers in production.](https://github.com/docker/docker-bench-security)
+
+# A Deeper Look into Node.js Docker Images
+[Research to help you choose the right base image for your Node.js application.](https://labs.iximiuz.com/tutorials/how-to-choose-nodejs-container-image)
+
+![Node Images Comparison](assets/images/node-images-comparison.png)
