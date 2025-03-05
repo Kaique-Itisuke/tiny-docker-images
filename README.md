@@ -1,6 +1,6 @@
 # About
 
-![Tiny Golang Docker Image](assets/images/tiny-docker-images-background.jpg)
+![Tiny Golang Docker Image](assets/images/tiny-docker-images-background.png)
 
 This project provides highly optimized, minimal Docker container images for popular languages (Python, Go, Node.js), focusing on size, security, and runtime efficiency. We leverage a suite of tools to achieve these goals:
 
