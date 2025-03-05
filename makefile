@@ -11,7 +11,6 @@ DOCKER_RUN_CMD = docker run -d -p $(PORT):$(PORT)
 DOCKER_SIZE_CMD = docker images
 DOCKER_PS_CMD = docker ps --filter "name= $(CONTAINER_NAME)" --filter "name= $(MINIFIED_CONTAINER_NAME)"
 MINIFY_CMD = $(DOCKER_HIT_N_RUN_CMD) mintoolkit/mint slim --include-workdir --http-probe-fail-on-status-5xx --http-probe-off --http-probe-cmd http:get:/health
-# --include-workdir --include-path /app
 CHECK_CMD = $(DOCKER_HIT_N_RUN_CMD) wagoodman/dive --ci
 INSPECT_CMD = $(DOCKER_HIT_N_RUN_CMD) wagoodman/dive
 XRAY_CMD = $(DOCKER_HIT_N_RUN_CMD) mintoolkit/mint xray
