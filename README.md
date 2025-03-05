@@ -27,7 +27,7 @@ These tools enable us to create lean, secure, and efficient container images, re
 Explore the monorepo to find optimized Docker images tailored for your specific language needs:
 - [![Language: Go][Golang-logo]](./golang/)
 - [![Language: Python][Python-logo]](./python/)
-- [![Language: Node][Node-logo]](][./node/])
+- [![Language: Node][Node-logo]](./node/)
 
 # References
 
