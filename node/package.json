@@ -6,7 +6,9 @@
   "author": "Kaique Itisuke",
   "type": "commonjs",
   "main": "src/main.ts",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "engines": {
     "node": ">=22.14.0"
   },
