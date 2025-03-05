@@ -1,0 +1,20 @@
+{
+  "name": "tiny-node-docker-image",
+  "version": "0.0.1",
+  "description": "This Node.js application implements a simple GET /health endpoint using the fastify framework.",
+  "license": "ISC",
+  "author": "Kaique Itisuke",
+  "type": "commonjs",
+  "main": "src/main.ts",
+  "scripts": {},
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1"
+  }
+}
