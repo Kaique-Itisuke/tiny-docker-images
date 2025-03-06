@@ -8,6 +8,18 @@ A small **162MB** Python image, using [UV](https://github.com/astral-sh/uv) as t
 
 ![Tiny Golang Docker Image](assets/images/final-image-size.png)
 
+## Makefile Help
+
+This project's Makefile provides a suite of commands to streamline Docker image management, including building, running, inspecting, analyzing, minifying, and checking for vulnerabilities.
+
+To view a detailed list of available commands and their descriptions, run:
+
+```bash
+make help
+```
+
+![Makefile help command](../assets/images/makefile-help.png)
+
 ## Usage
 ### Build the image and run the container
 ```bash
