@@ -18,7 +18,7 @@ RUN npm run build
 
 RUN npm prune --production
 
-FROM gcr.io/distroless/nodejs22-debian12:latest AS runner
+FROM gcr.io/distroless/nodejs22-debian12:nonroot AS runner
 
 COPY --from=builder /app/node_modules /app/node_modules
 COPY --from=builder /app/dist /app
