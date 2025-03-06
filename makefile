@@ -19,6 +19,33 @@ DIFF_INSTALL_CMD = go install github.com/reproducible-containers/diffoci/cmd/dif
 DIFF_CMD = diffoci diff --semantic --backend=local
 SBOM_CMD = $(DOCKER_HIT_N_RUN_CMD) anchore/syft
 
+help:
+	@echo "Makefile Help:"
+	@echo "  build         : Builds the Docker image."
+	@echo "  down          : Removes running Docker containers."
+	@echo "  run           : Runs the Docker image in a container."
+	@echo "  run-min       : Runs the minified Docker image in a container."
+	@echo "  ps            : Lists running Docker containers."
+	@echo "  size          : Shows the size of the Docker image."
+	@echo "  size-min      : Shows the size of the minified Docker image."
+	@echo "  sizes         : Shows the sizes of both Docker images."
+	@echo "  up            : Builds, runs, and shows the size of the Docker image."
+	@echo "  up-min        : Runs the minified image and shows its size."
+	@echo "  check         : Checks the Docker image's layers with dive (CI mode)."
+	@echo "  check-min     : Checks the minified image's layers with dive (CI mode)."
+	@echo "  inspect       : Inspects the Docker image's layers with dive."
+	@echo "  inspect-min   : Inspects the minified image's layers with dive."
+	@echo "  xray          : Performs a basic xray analysis of the Docker image."
+	@echo "  xray-min      : Performs a basic xray analysis of the minified Docker image."
+	@echo "  minify        : Minifies the Docker image using mintoolkit."
+	@echo "  min           : Minifies the image and shows the sizes."
+	@echo "  sec           : Performs a security scan of the Docker image using trivy."
+	@echo "  sec-min       : Performs a security scan of the minified Docker image using trivy."
+	@echo "  diff-install  : Installs diffoci."
+	@echo "  diff          : Generates a diff between the original and minified images."
+	@echo "  sbom          : Generates a Software Bill of Materials (SBOM) for the Docker image."
+	@echo "  sbom-min      : Generates a Software Bill of Materials (SBOM) for the minified Docker image."
+
 build:
 	docker build -t $(IMAGE_NAME) .
 
