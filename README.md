@@ -49,3 +49,7 @@ Explore the monorepo to find optimized Docker images tailored for your specific 
 [Golang-logo]: https://img.shields.io/badge/language-Go-00ADD8?style=for-the-badge&logo=go&logoColor=blue
 [Python-logo]: https://img.shields.io/badge/language-Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
 [Node-logo]: https://img.shields.io/badge/language-Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=blue
+
+# License
+
+This project is licensed under the MIT License, see [LICENSE](LICENSE) for details
