@@ -74,7 +74,7 @@ make diff-install
 make diff
 ```
 
-![Original vs Minified Image](../assets/images/diff-images-file.png)
+![Original vs Minified Image](assets/images/diff-images-file.png)
 
 ### Security scan to the original image to find known vulnerabilities (CVEs) and sensitive information and secrets using [Trivy](https://github.com/aquasecurity/trivy)
 ```bash
