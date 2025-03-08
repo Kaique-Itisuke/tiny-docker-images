@@ -28,7 +28,7 @@ make up
 ```
 ![Running Container](assets/images/running-container.png)
 
-### Acess the health endpoint
+### Access the health endpoint
 [http://localhost:8000/health](http://localhost:8000/health)
 
 ![Health Endpoint](assets/images/health-endpoint.png)
