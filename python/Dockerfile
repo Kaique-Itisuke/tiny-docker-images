@@ -20,7 +20,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 COPY ./src ./src
 
-#FROM gcr.io/distroless/python3-debian12 AS runner
+#FROM gcr.io/distroless/python3-debian12:nonroot AS runner
+# https://github.com/GoogleContainerTools/distroless/issues/1543#issuecomment-2432044825
 FROM python:${IMAGE_TAG} AS runner
 
 COPY --from=builder /app/.venv /app/.venv
